@@ -1,0 +1,1 @@
+pyinstaller -F .\stray.py -w -i .\icon.png
