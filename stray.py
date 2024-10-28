@@ -65,7 +65,10 @@ def main(username, password, timeout) -> None:
     while True:
         if not has_internet():
             logging.info('正在连接')
-            connect(username, password)
+            try:
+                connect(username, password)
+            except:
+                pass
         else:
             logging.info('已连接')
         time.sleep(int(timeout))
